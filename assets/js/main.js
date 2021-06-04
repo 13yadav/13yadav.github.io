@@ -1,123 +1,57 @@
-/*
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/*==================== MENU SHOW Y HIDDEN ====================*/
+const navMenu = document.getElementById('nav-menu'),
+navToggle = document.getElementById('nav-toggle'),
+navClose = document.getElementById('nav-close')
 
-(function($) {
+/*===== MENU SHOW =====*/
+/* Validate if constant exists */
+if(navToggle) {
+   navToggle.addEventListener('click', () => {
+      navMenu.classList.add('show-menu')
+   })
+}
 
-	var	$window = $(window),
-		$body = $('body'),
-		$nav = $('#nav');
+/*===== MENU HIDDEN =====*/
+/* Validate if constant exists */
+if(navClose) {
+   navClose.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu')
+   })
+}
 
-	// Breakpoints.
-		breakpoints({
-			wide:      [ '961px',  '1880px' ],
-			normal:    [ '961px',  '1620px' ],
-			narrow:    [ '961px',  '1320px' ],
-			narrower:  [ '737px',  '960px'  ],
-			mobile:    [ null,     '736px'  ]
-		});
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav_link')
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    // When we click on each nav_link, we remove the show-menu class
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
-	// Nav.
-		var $nav_a = $nav.find('a');
 
-		$nav_a
-			.addClass('scrolly')
-			.on('click', function(e) {
+/*==================== ACCORDION SKILLS ====================*/
 
-				var $this = $(this);
 
-				// External link? Bail.
-					if ($this.attr('href').charAt(0) != '#')
-						return;
+/*==================== QUALIFICATION TABS ====================*/
 
-				// Prevent default.
-					e.preventDefault();
 
-				// Deactivate all links.
-					$nav_a.removeClass('active');
+/*==================== SERVICES MODAL ====================*/
 
-				// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-					$this
-						.addClass('active')
-						.addClass('active-locked');
 
-			})
-			.each(function() {
+/*==================== PORTFOLIO SWIPER  ====================*/
 
-				var	$this = $(this),
-					id = $this.attr('href'),
-					$section = $(id);
 
-				// No section for this link? Bail.
-					if ($section.length < 1)
-						return;
+/*==================== TESTIMONIAL ====================*/
 
-				// Scrollex.
-					$section.scrollex({
-						mode: 'middle',
-						top: '-10vh',
-						bottom: '-10vh',
-						initialize: function() {
 
-							// Deactivate section.
-								$section.addClass('inactive');
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
-						},
-						enter: function() {
 
-							// Activate section.
-								$section.removeClass('inactive');
+/*==================== CHANGE BACKGROUND HEADER ====================*/ 
 
-							// No locked links? Deactivate all links and activate this section's one.
-								if ($nav_a.filter('.active-locked').length == 0) {
 
-									$nav_a.removeClass('active');
-									$this.addClass('active');
+/*==================== SHOW SCROLL UP ====================*/ 
 
-								}
 
-							// Otherwise, if this section's link is the one that's locked, unlock it.
-								else if ($this.hasClass('active-locked'))
-									$this.removeClass('active-locked');
-
-						}
-					});
-
-			});
-
-	// Scrolly.
-		$('.scrolly').scrolly();
-
-	// Header (narrower + mobile).
-
-		// Toggle.
-			$(
-				'<div id="headerToggle">' +
-					'<a href="#header" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
-
-		// Header.
-			$('#header')
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'header-visible'
-				});
-
-})(jQuery);
+/*==================== DARK LIGHT THEME ====================*/ 
