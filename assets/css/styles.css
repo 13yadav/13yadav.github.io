@@ -112,18 +112,18 @@ body {
     padding: 2rem 0 4rem;
 }
 
-.section_title {
+.section-title {
     font-size: var(--h1-font-size);
 }
 
-.section_subtitle {
+.section-subtitle {
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-3);
 }
 
-.section_title,
-.section_subtitle {
+.section-title,
+.section-subtitle {
     text-align: center;
 }
 
@@ -158,26 +158,26 @@ body {
     align-items: center;
 }
 
-.nav_logo, .nav_toggle {
+.nav-logo, .nav-toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
 
 }
 
-.nav_logo:hover {
+.nav-logo:hover {
     color: var(--first-color);
 }
 
-.nav_toggle {
+.nav-toggle {
     font-size: 1.1rem;
     cursor: pointer;
 }
-.nav_toggle:hover {
+.nav-toggle:hover {
     color: var(--first-color);
 }
 
 @media screen and (max-width: 767px) {
-    .nav_menu {
+    .nav-menu {
         position: fixed;
         bottom: -100%;
         left: 0;
@@ -190,12 +190,12 @@ body {
     }
 }
 
-.nav_list {
+.nav-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.nav_link{
+.nav-link{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,15 +204,15 @@ body {
     font-weight: var(--font-medium);
 }
 
-.nav_link:hover {
+.nav-link:hover {
     color: var(--first-color);
 }
 
-.nav_icon {
+.nav-icon {
     font-size: 1.2rem;
 }
 
-.nav_close {
+.nav-close {
     position: absolute;
     right: 1.3rem;
     bottom: .5rem;
@@ -221,7 +221,7 @@ body {
     color: var(--first-color);
 }
 
-.nav_close:hover {
+.nav-close:hover {
     color: var(--first-color-alt);
 }
 
@@ -237,84 +237,84 @@ body {
 
 
 /*==================== HOME ====================*/
-.home_container {
+.home-container {
     gap: 1rem;
 }
 
-.home_content {
+.home-content {
     grid-template-columns: .5fr 3fr;
     padding-top: 3.5rem;
     align-items: center;
 }
 
-.home_social {
+.home-social {
     display: grid;
     grid-template-columns: max-content;
     row-gap: 1rem;
 }
 
-.home_social_icon {
+.home-social-icon {
     font-size: 1.5rem;
     color: var(--first-color);
 }
 
-.home_social_icon:hover {
+.home-social-icon:hover {
     color: var(--first-color-alt);
 }
 
-.home_blob {
+.home-blob {
     width: 200px;
     fill: var(--first-color);
 }
 
-.home_blob_img {
+.home-blob-img {
     width: 170px;
 }
 
-.home_data {
+.home-data {
     grid-column: 1/3;
 }
 
-.home_title {
+.home-title {
     font-size: var(--big-font-size);
 }
 
-.hoem_subtitle {
+.hoem-subtitle {
     font-size: var(--h3-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
 }
 
-.home_description {
+.home-description {
     margin-bottom: var(--mb-2);
 }
 
-.home_scroll {
+.home-scroll {
     display: none;
 }
 
-.home_scroll_button {
+.home-scroll-button {
     color: var(--first-color);
     transition: .3s;
 }
 
-.home_scroll_button:hover {
+.home-scroll-button:hover {
     transform: translateY(.25rem);
 }
 
-.home_scroll_mouse {
+.home-scroll-mouse {
     font-size: 2rem;
 }
 
-.home_scroll_name {
+.home-scroll-name {
     font-size: var(--small-font-size);
     color: var(--title-color);
     font-weight: var(--font-medium);
     margin-right: var(--mb-0-25);
 }
 
-.home_scroll_arrow {
+.home-scroll-arrow {
     font-size: 1.25rem;
 }
 
@@ -332,52 +332,52 @@ body {
     background-color: var(--first-color-alt);
 }
 
-.button_icon {
+.button-icon {
     font-size: 1.25rem;
     margin-left: var(--mb-0-5);
     transition: .3s;
 }
 
-.button_flex {
+.button-flex {
     display: inline-flex;
     align-items: center;
 }
 
 /*==================== ABOUT ====================*/
-.about_img {
+.about-img {
     width: 250px;
     border-radius: .5rem;
     justify-self: center;
     align-self: center;
 }
 
-.about_description {
+.about-description {
     text-align: center;
     margin-bottom: var(--mb-2-5);
 }
 
-.about_info {
+.about-info {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: var(--mb-2-5);
 }
 
-.about_info_title {
+.about-info-title {
     font-size: var(--h2-font-size);
     font-weight: var(--font-semi-bold);
 }
 
-.about_info_name {
+.about-info-name {
     font-size: var(--smaller-font-size);
 }
 
-.about_info_name,
-.about_info_title {
+.about-info-name,
+.about-info-title {
     display: block;
     text-align: center;
 }
 
-.about_buttons {
+.about-buttons {
     display: flex;
     justify-content: center;
 }
