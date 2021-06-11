@@ -1,11 +1,11 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
-navToggle = document.getElementById('nav-toggle'),
-navClose = document.getElementById('nav-close')
+   navToggle = document.getElementById('nav-toggle'),
+   navClose = document.getElementById('nav-close')
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
-if(navToggle) {
+if (navToggle) {
    navToggle.addEventListener('click', () => {
       navMenu.classList.add('show-menu')
    })
@@ -13,7 +13,7 @@ if(navToggle) {
 
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
-if(navClose) {
+if (navClose) {
    navClose.addEventListener('click', () => {
       navMenu.classList.remove('show-menu')
    })
@@ -22,17 +22,17 @@ if(navClose) {
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav_link')
 
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav_link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
+function linkAction() {
+   const navMenu = document.getElementById('nav-menu')
+   // When we click on each nav_link, we remove the show-menu class
+   navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName('skills-content'),
-skillsHeader = document.querySelectorAll('.skills-header')
+   skillsHeader = document.querySelectorAll('.skills-header')
 
 function toggleSkills() {
    let itemClass = this.parentNode.className
@@ -51,7 +51,7 @@ skillsHeader.forEach((el) => {
 
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
+   tabContents = document.querySelectorAll('[data-content]')
 
 tabs.forEach(tab => {
    tab.addEventListener('click', () => {
@@ -71,10 +71,10 @@ tabs.forEach(tab => {
 
 /*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll('.services-modal'),
-      modalBtns = document.querySelectorAll('.services-button'),
-      modalCloses = document.querySelectorAll('.services-modal-close')
+   modalBtns = document.querySelectorAll('.services-button'),
+   modalCloses = document.querySelectorAll('.services-modal-close')
 
-let modal = function(modalClick) {
+let modal = function (modalClick) {
    modalViews[modalClick].classList.add('active-modal')
 }
 modalBtns.forEach((modalBtn, i) => {
@@ -92,7 +92,18 @@ modalCloses.forEach((modalClose) => {
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-
+let swiper = new Swiper(".portfolio-container", {
+   cssMode: true,
+   loop: true,
+   navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+   },
+   pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+   },
+});
 
 /*==================== TESTIMONIAL ====================*/
 
@@ -100,10 +111,10 @@ modalCloses.forEach((modalClose) => {
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+/*==================== CHANGE BACKGROUND HEADER ====================*/
 
 
-/*==================== SHOW SCROLL UP ====================*/ 
+/*==================== SHOW SCROLL UP ====================*/
 
 
-/*==================== DARK LIGHT THEME ====================*/ 
+/*==================== DARK LIGHT THEME ====================*/
