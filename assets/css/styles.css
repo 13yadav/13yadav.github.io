@@ -336,6 +336,15 @@ img {
   transition: 0.3s;
 }
 
+.button-white {
+  background-color: #fff;
+  color: var(--first-color);
+}
+
+.button-white:hover {
+  background-color: #fff;
+}
+
 .button-flex {
   display: inline-flex;
   align-items: center;
@@ -358,7 +367,7 @@ img {
 
 /*==================== ABOUT ====================*/
 .about-img {
-  width: 250px;
+  width: 300px;
   border-radius: 0.5rem;
   justify-self: center;
   align-self: center;
@@ -749,8 +758,73 @@ img {
 }
 
 /*==================== PROJECT IN MIND ====================*/
+.project {
+  text-align: center;
+}
+
+.project-bg {
+  background-color: var(--first-color-second);
+  padding-top: 3rem;
+}
+
+.project-title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+
+.project-description {
+  margin-bottom: var(--mb-1-5);
+}
+
+.project-title,
+.project-description {
+  color: #fff;
+}
+
+.project-img {
+  width: 100%;
+  justify-self: center;
+}
 
 /*==================== TESTIMONIAL ====================*/
+.testimonial-data,
+.testimonial-header {
+  display: flex;
+}
+
+.testimonial-data {
+  justify-content: space-between;
+  margin-bottom: var(--mb-1);
+}
+
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: var(--mb-0-75);
+}
+
+.testimonial-name {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.testimonial-client {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.testimonial-description {
+  margin-bottom: var(--mb-2-5);
+}
+
+.testimonial-icon-star {
+  color: var(--first-color);
+}
+
+.swiper-container .swiper-pagination-testimonial {
+  bottom: 0;
+}
 
 /*==================== CONTACT ME ====================*/
 
